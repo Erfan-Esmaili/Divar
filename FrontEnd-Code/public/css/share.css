@@ -1,5 +1,6 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 
+
 @font-face {
   font-family: "iransans-regular";
   src: url("../fonts/iran_sans/eot/IRANSansX-Regular.eot");
@@ -31,25 +32,6 @@
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-}
-
-
-@font-face {
-  font-family: "iransans-bold";
-  src: url(../fonts/iran_sans/eot/IRANSansX-bold.eot),
-    url(../fonts/iran_sans/ttf/IRANSansX-bold.ttf),
-    url(../fonts/iran_sans/woff/IRANSansX-bold.woff),
-    url(../fonts/iran_sans/woff2/IRANSansX-bold.woff2);
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "iransans-medium";
-  src: url(../fonts/iran_sans/eot/IRANSansX-Medium.eot),
-    url(../fonts/iran_sans/ttf/IRANSansX-Medium.ttf),
-    url(../fonts/iran_sans/woff/IRANSansX-Medium.woff),
-    url(../fonts/iran_sans/woff2/IRANSansX-Medium.woff2);
-  font-weight: bold;
 }
 
 /* !=======================================Default Style!======================================= */
