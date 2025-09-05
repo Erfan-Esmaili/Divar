@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>صفحه اصلی -دیوار</title>
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://support-faq.divarcdn.com/web/2024/03/favicon-32x32.png" />
+
+  <link rel="stylesheet" href="https://cdn.lineawesome.com/1.3.0/line-awesome/css/line-awesome.min.css">
+
+  <link rel="stylesheet" href="FrontEnd-Code/vendor/bootstrap/bootstrap.css" />
+  <link rel="stylesheet" href="FrontEnd-Code/vendor/bootstrap_icon/bootstraicon.css" />
+  <link rel="stylesheet" href="FrontEnd-Code/public/css/share.css" />
+  <link rel="stylesheet" href="FrontEnd-Code/public/css/index.css" />
+</head>
+
+<body>
+  <!--!==========================================Wrapper==========================================!-->
+  <section class="wrapper">
+    <!--!==========================================Header==========================================!-->
+    <nav class="nav">
+      <img class="nav__logo" src="FrontEnd-Code/public/images/header/logo.svg" />
+      <ul class="nav__menu-list">
+        <li class="nav__menu-item">
+          <a class="nav__menu-link" href="FrontEnd-Code/pages/new.html">ثبت آگهی</a>
+        </li>
+        <li class="nav__menu-item">
+          <a class="nav__menu-link" href="FrontEnd-Code/pages/about.html">درباره دیوار</a>
+        </li>
+        <li class="nav__menu-item">
+          <a class="nav__menu-link" href="FrontEnd-Code/pages/download.html">دریافت برنامه</a>
+        </li>
+        <li class="nav__menu-item">
+          <a class="nav__menu-link" href="FrontEnd-Code/pages/contact-us.html">ارتباط با ما</a>
+        </li>
+        <li class="nav__menu-item">
+          <a class="nav__menu-link" href="FrontEnd-Code/pages/support.html">پشتیبانی</a>
+        </li>
+      </ul>
+    </nav>
+    <!--!==========================================End Header==========================================!-->
+
+    <!--!==========================================Main==========================================!-->
+    <main class="main">
+      <span class="main__text-first">دﯾﻮار، ﭘﺎﯾﮕﺎه ﺧﺮﯾﺪ و ﻓﺮوش ﺑﯽ‌واﺳﻄﻪ‌!</span>
+      <span class="main__text-second">اﮔﻪ دﻧﺒﺎل ﭼﯿﺰی ﻫﺴﺘﯽ، ﺷﻬﺮت رو اﻧﺘﺨﺎب ﮐﻦ و ﺗﻮ دﺳﺘﻪ‌ﺑﻨﺪی‌ﻫﺎ ﺑﻪ دﻧﺒﺎﻟﺶ
+        ﺑﮕﺮد. اﮔﺮ ﻫﻢ ﻣﯽ‌ﺧﻮای ﭼﯿﺰی ﺑﻔﺮوﺷﯽ، ﭼﻨﺪ ﺗﺎ ﻋﮑﺲ ﺧﻮب ازش ﺑﮕﯿﺮ و آﮔﻬﯿﺖ رو
+        ﺑﭽﺴﺒﻮن ﺑﻪ دﯾﻮار.</span>
+      <form class="main__form">
+        <i class="main__icon-input bi bi-search"></i>
+        <input id="search-input" class="main__input" type="text" placeholder="جستجوی شهر" autofocus />
+
+        <!-- add class active to show search result box -->
+        <ul class="search-result-cities"></ul>
+      </form>
+      <div class="main__cities">
+        <span class="main__cities-title">شهر های پر بازدید</span>
+
+        <div class="d-flex justify-content-center" id="loadingContent">
+          <div class="spinner-border text-danger p-3 fs-4" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <ul class="main__cities-list" id="popular-cities">
+          <!-- Cities -->
+        </ul>
+      </div>
+    </main>
+    <!--!==========================================End Main==========================================!-->
+
+    <!--!==========================================socials==========================================!-->
+    <div class="socials">
+      <div class="socials__section-first">
+        <div class="socials__imgs">
+          <a class="socials__img-link" href="#">
+            <img class="socials__img" src="FrontEnd-Code/public/images/main/enamad.png" alt="" />
+          </a>
+          <a class="socials__img-link" href="#">
+            <img class="socials__img" src="FrontEnd-Code/public/images/main/etehadie.png" alt="" />
+          </a>
+          <a class="socials__img-link" href="#">
+            <img class="socials__img" src="FrontEnd-Code/public/images/main/neshan.png" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="socials__section-second">
+        <ul class="socials__list" id="footer__social-media"></ul>
+      </div>
+    </div>
+    <!--!==========================================End socials==========================================!-->
+  </section>
+  <!--!==========================================End Wrapper==========================================!-->
+
+
+
+
+  <script src="FrontEnd-Code/public/js/index.js" type="module"></script>
+  <script src="FrontEnd-Code/public/js/share.js" type="module"></script>
+</body>
+
+</html>
