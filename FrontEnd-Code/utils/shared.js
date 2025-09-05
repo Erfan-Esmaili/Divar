@@ -30,7 +30,7 @@ const getAndShowSocialsMedia = async () => {
           `
             
               <a href="${social.link}" class="sidebar__icon-link">
-    <img src="${social.icon.filename}" alt="${social.name}" class="sidebar__icon bi bi-twitter">
+    <img src="${social.icon}" alt="${social.name}" class="sidebar__icon bi bi-twitter">
   </a>
             
             
