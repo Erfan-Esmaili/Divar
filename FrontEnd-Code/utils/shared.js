@@ -29,10 +29,9 @@ const getAndShowSocialsMedia = async () => {
           "beforeend",
           `
             
-              <a href="${social.link}" class="sidebar__icon-link">
-    <img src="${social.icon}" alt="${social.name}" class="sidebar__icon bi bi-twitter">
-  </a>
-            
+           <a href="${social.link}" class="sidebar__icon-link">
+    <img width="18px" height="18px" src="${baseUrl}/${social.icon.path}" alt="${social.name}" class="sidebar__icon bi bi-twitter">
+  </a>  
             
             `
         );
