@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ثبت آگهی در دیوار</title>
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://support-faq.divarcdn.com/web/2024/03/favicon-32x32.png" />
+    <link rel="stylesheet" href="../../vendor/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="../../vendor/bootstrap_icon/bootstraicon.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <link rel="stylesheet" href="../../public/css/share.css" />
+    <link rel="stylesheet" href="../../public/css/registerPost.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+</head>
+
+<body>
+    <!--!==========================================Header==========================================!-->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="header__wrapper">
+                <div class="header__right">
+                    <a class="header__logo-link" href="FrontEnd-Code/pages/posts.html">
+                        <img class="header__logo-img" src="../../public/images/header/logo.svg" alt="logo">
+                    </a>
+                    <button class="header__city">
+                        <i class="header__city-icon bi bi-geo-alt"></i>
+                        <span class="header__city-title" id="header-city-title"></span>
+                    </button>
+                </div>
+                <div class="header__left">
+                    <div class="dropdown header_dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="header__left-icon bi bi-person"></i>
+                            دیوار من
+                        </button>
+                        <ul class="dropdown-menu header_dropdown_menu"></ul>
+
+                    </div>
+                    <a class="header__left-link" href="FrontEnd-Code/pages/support.html">
+                        پشتیبانی
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--!==========================================End Header==========================================!-->
+
+    <!--!===========================================Main==========================================!-->
+    <main class="main">
+        <p class="category-title">ثبت آگهی</p>
+        <div class="category_details">
+            <p id="subCategory-title"></p>
+            <img src="https://s100.divarcdn.com/statics/2024/02/entertainment.2ee67eb3.png" alt>
+            <a href="FrontEnd-Code/pages/new.html">تغییر دسته‌بندی</a>
+        </div>
+        <div class="groups">
+            <div class="group">
+                <p class="field-title">شهر</p>
+                <select id="city-select" required="required"></select>
+                </label>
+            </div>
+            <div class="group">
+                <p class="field-title">محله</p>
+                <select id="neighborhood-select" required="required"> </select>
+            </div>
+        </div>
+        <div>
+            <p class="field-title">موقعیت مکانی آگهی</p>
+            <div id="map"></div>
+            <div class="map-controll">
+                <p>موقعیت دقیق نمایش داده نشود</p>
+                <label class="switch">
+                    <input class="icon-controll" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <div class="uploader">
+            <p class="field-title">عکس آگهی</p>
+            <span>عکس‌هایی مربوط به آگهی اضافه کنید.</span>
+            <span>در صورت نداشتن عکس ، آگهی را بدون عکس
+                ثبت کنید</span>
+            <div class="post-images">
+                <div class="uploader-box">
+                    <i class="bi bi-image"></i>
+                    <i class="bi bi-plus-circle-fill"></i>
+                    <input id="uploader" type="file">
+                </div>
+                <div class="images" id="images-container"></div>
+            </div>
+            <span>تعداد عکس‌های انتخاب شده نباید بیشتر
+                از ۲۰ باشد.</span>
+        </div>
+        <div class="groups" id="dynamic-fields"></div>
+
+        <div class="groups">
+
+            <div class="group edit-post-title">
+                <p class="field-title">قیمت</p>
+                <input id="post-price-input" type="number">
+            </div>
+            <div class="group checkbox-group">
+                <input class="checkbox" id="exchange-checkbox" type="checkbox">
+                <p> مایلم معاوضه کنم</p>
+            </div>
+            <div class="group">
+                <p class="field-title">عنوان آگهی</p>
+                <span>در عنوان آگهی به موارد مهمی مانند
+                    نوع ملک و متراژ اشاره کنید. </span>
+                <input id="post-title-input" type="text">
+            </div>
+
+            <div class="group">
+                <p class="field-title">توضیحات آگهی</p>
+                <span>در توضیحات آگهی به مواردی مانند
+                    شرایط فروش، جزئیات و ویژگی‌های قابل
+                    توجه، دسترسی‌های محلی و موقعیت
+                    قرارگیری ملک اشاره کنید.</span>
+                <textarea id="post-description-textarea" id cols="30" rows="8"></textarea>
+            </div>
+        </div>
+        <div class="post_controll">
+            <a href="FrontEnd-Code/pages/posts.html">انصراف</a>
+            <button id="register-btn">ارسال آگهی</button>
+        </div>
+    </main>
+    <!--!==========================================End Main==========================================!-->
+
+    <!--!==========================================city Modal==========================================!-->
+    <div class="city-modal" id="city-modal">
+        <div class="city-modal__overlay"></div>
+        <section>
+            <div class="city-modal__header">
+                <div class="city-modal__header-wrapper">
+                    <div class="city-modal__title-wrapper">
+                        <span class="city-modal__title">انتخاب شهر</span>
+                        <button id="delete-all-cities" class="city-modal__btn delete_cities">حذف همه</button>
+                    </div>
+                    <p id="city_modal_error">حداقل یک شهر را انتخاب کنید.</p>
+                    <div class="city-modal__selected" id="city-selected"></div>
+                    <div class="city-modal__searchbar">
+                        <form class="city-modal__form">
+                            <input class="city-modal__input" id="city-modal-search-input" type="text"
+                                placeholder="جستجو در شهرها">
+                            <i class="city-modal__icon bi bi-search"></i>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="city-modal__cities">
+                <ul class="city-modal__cities-list" id="city_modal_list"></ul>
+
+            </div>
+            <div class="city-modal__footer">
+                <div class="city-modal__footer-wrapper">
+                    <button class="city-modal__btn-footer city-modal__close">انصراف</button>
+                    <button class="city-modal__btn-footer city-modal__accept ">تایید</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--!==========================================End city Modal==========================================!-->
+
+    <div id="loading-container" >
+        <div id="loading"></div>
+    </div>
+
+    <script src="../../public/js/new/registerPost.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin></script>
+    <script src="../../public/js/share.js" type="module"></script>
+    <script src="../../vendor/bootstrap/bootstrap.js"></script>
+    <script src="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>
+
