@@ -1,0 +1,30 @@
+/** index */
+@media (max-width:650px){
+  .wrapper{
+    width: 33rem;
+  }
+}
+
+/** posts */
+
+@media (max-width:992px){
+  .header__left, .header__right{
+    width: 100%;
+  }
+}
+
+@media (max-width:992px){
+  .main{
+    margin-top: 12rem;
+  }
+}
+
+.offcanvas-menu{
+  margin-top: 10.1rem;
+}
+
+@media (max-width:500px){
+  .city-modal--active{
+  width:90%;
+  }
+}
