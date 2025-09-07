@@ -20,7 +20,12 @@
 }
 
 .offcanvas-menu{
-  margin-top: 10.1rem;
+  /* margin-top: 10.1rem; */
+  width: 75% !important;
+}
+
+.offcanvas-header button{
+  font-size: 1.5rem;
 }
 
 @media (max-width:500px){
