@@ -6,7 +6,7 @@
 <p>🛠️ &nbsp; Back End Developer : <a href="https://sabzlearn.ir">Sabzlearn Teams</a></p>
 <h1 align="center">
 <a href="https://erfan-esmaili.github.io/Divar/">
-  <img src="https://img.shields.io/badge/See%20Online%20Demo-red" width="150" />
+  <img src="https://img.shields.io/badge/Live%20Demo-red" width="150" />
 </a>
 </h1>
 <br>
@@ -19,6 +19,15 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="60" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" width="60" />
 </p>
+
+### JavaScript Libraries:
+This project uses several JavaScript libraries for enhanced frontend functionality:
+
+- ![Swiper.js](https://img.shields.io/badge/Swiper.js-6DA1F2?style=for-the-badge&logo=swiper&logoColor=white) **Swiper.js** – Modern touch slider library
+- ![SweetAlert2](https://img.shields.io/badge/SweetAlert2-orange) – Beautiful alert messages
+
+
+
 
 <br>
 
